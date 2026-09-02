@@ -410,3 +410,95 @@ kustomize build | kubectl apply -f -
 ## License
 
 [License](LICENSE.md)
+
+## Project Verification & Evidence
+
+### Live Application
+
+**Frontend Application:**  
+http://af5d982743a9a46b8b9c3dd7662662d9-1989097969.us-east-1.elb.amazonaws.com
+
+**Backend API:**  
+http://a9e1be7a08eac4fdf87f343ab9f6d7b9-962299154.us-east-1.elb.amazonaws.com/movies
+
+Both applications have been successfully deployed to Amazon EKS and verified.
+
+### CI/CD Pipeline Evidence
+
+#### Backend Continuous Integration
+
+Backend linting, testing, and Docker build completed successfully.
+
+![Backend CI](screenshots/01-backend-ci.png)
+
+#### Frontend Continuous Integration
+
+Frontend linting, testing, and Docker build completed successfully.
+
+![Frontend CI](screenshots/02-frontend-ci.png)
+
+#### Backend Continuous Deployment
+
+Backend linting, testing, Docker image build/push, and EKS deployment completed successfully.
+
+![Backend CD](screenshots/03-backend-cd.png)
+
+#### Frontend Continuous Deployment
+
+Frontend linting, testing, Docker image build/push, and EKS deployment completed successfully.
+
+![Frontend CD](screenshots/04-frontend-cd.png)
+
+### Kubernetes Evidence
+
+#### Kubernetes Resources
+
+Both frontend and backend pods and deployments are running successfully, with LoadBalancer services exposed.
+
+![Kubernetes Resources](screenshots/05-kubectl-get-all.png)
+
+#### Backend Deployment
+
+The backend deployment is available and running the Docker image from Amazon ECR.
+
+![Backend Deployment](screenshots/06-backend-deployment.png)
+
+#### Frontend Deployment
+
+The frontend deployment is available and running the Docker image from Amazon ECR.
+
+![Frontend Deployment](screenshots/07-frontend-deployment.png)
+
+### Application Verification
+
+#### Backend API
+
+The deployed backend API successfully returns the list of movies.
+
+![Backend API](screenshots/08-backend-api.png)
+
+#### Frontend Application
+
+The deployed frontend application successfully loads and displays the movie list.
+
+![Frontend Application](screenshots/09-frontend-app1.png)
+
+### Amazon ECR Evidence
+
+#### Backend ECR
+
+The backend Docker image was successfully pushed to Amazon ECR.
+
+![Backend ECR](screenshots/10-backend-ecr.png)
+
+#### Frontend ECR
+
+The frontend Docker image was successfully pushed to Amazon ECR.
+
+![Frontend ECR](screenshots/11-frontend-ecr.png)
+
+### Additional Evidence
+
+A consolidated project evidence document is also included:
+
+[Download Project Evidence Document](screenshots/Movie_Picture_Pipeline_Project_Evidence.docx)
