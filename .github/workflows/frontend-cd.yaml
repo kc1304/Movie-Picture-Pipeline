@@ -13,7 +13,7 @@ env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: frontend
   EKS_CLUSTER_NAME: cluster
-  BACKEND_API_URL: http://a78b37113fc664647a700da3badb097f-856269699.us-east-1.elb.amazonaws.com
+  BACKEND_API_URL: http://a9e1be7a08eac4fdf87f343ab9f6d7b9-962299154.us-east-1.elb.amazonaws.com
 
 jobs:
   lint:
